@@ -7,14 +7,15 @@
 </head>
 <body>
 <svg width="720" height="120">
-  <circle cx="40" cy="60" r="10"></circle>
-  <circle cx="80" cy="60" r="10"></circle>
-  <circle cx="120" cy="60" r="10"></circle>
+    <circle cx="80" cy="60" r="50" style="fill:steelblue;"></circle>
+    <circle cx="40" cy="60" r="30" style="fill:white"></circle>
 </svg>
 <script>
-    var circle = d3.selectAll("circle");
-    circle.style("fill", "steelblue");
-circle.attr("r", 30);
+    var svg = d3.select("svg");
+    var circle = svg.selectAll("circle");
+    circle.attr("cy", 60);
+    circle.attr("cx", 60);
+    <!--circle.attr("r", function(i) { return Math.random() * 100 * (i + 1); });-->
 </script>
 </body>
 </html>
